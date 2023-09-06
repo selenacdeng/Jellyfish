@@ -1,6 +1,41 @@
-rawTable = readtable('Figure 1.xlsx','Sheet','Figure 1 (0g)');
+%pulling data from excel file for m = 0g
+rawTable = readtable('Figure 1.xlsx','Sheet','Figure 1 (0g)'); 
+%time for 0g data
 x1 = rawTable.t1;
-y1 = rawTable.pos1;
+x4 = rawTable.t4;
+x7 = rawTable.t7;
 
-plot(x1,y1);
-plotmatrix(3,2); %creates a 3x2 plot matrix
+%plot a
+y1a = rawTable.pos1;
+y4a = rawTable.pos4;
+y7a = rawTable.pos7;
+
+%plot b
+y1b = rawTable.vel1;
+y4b = rawTable.vel4;
+y7b = rawTable.vel7;
+
+tiledlayout(3,2)
+sz = 10;
+
+%top left
+nexttile
+hold on
+scatter(x1,y1a,'filled');
+scatter(x4,y4a,'filled','o');
+scatter(x7,y7a,'filled','g');
+hold off
+
+%top right
+nexttile
+hold on
+scatter(x1,y1b,'filled');
+scatter(x4,y4b,'filled','o');
+scatter(x7,y7b,'filled','g');
+hold off
+
+
+% Xdata = [[x1a,x4a,x7a],[x1a,x4a,x7a],[x1a,x4a,x7a]];
+% Ydata = [[y1a,y4a,y7a],[y1a,y4a,y7a],[y1a,y4a,y7a]];
+% 
+% plotmatrix(Xdata,Ydata); %creates a 3x2 plot matrix
