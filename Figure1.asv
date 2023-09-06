@@ -1,0 +1,6 @@
+rawTable = readtable('Figure 1.xlsx','Sheet','Figure 1 (0g)');
+x1 = rawTable.t1;
+y1 = rawTable.pos1;
+
+plot(x1,y1);
+plotmatrix(3,2); %creates a 3x2 plot matrix
