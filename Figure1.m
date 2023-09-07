@@ -25,6 +25,8 @@ scatter(x1,y1a,5,'filled');
 scatter(x4,y4a,5,'filled','o');
 scatter(x7,y7a,5,'filled','g');
 hold off
+xlabel('time')
+ylabel('position')
 
 %top right
 nexttile
@@ -33,5 +35,8 @@ scatter(x1,y1b,5,'filled');
 scatter(x4,y4b,5,'filled','o');
 scatter(x7,y7b,5,'filled','g');
 hold off
+xlabel('time')
+ylabel('velocity')
+
 
 
